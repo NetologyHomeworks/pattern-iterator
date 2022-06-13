@@ -28,7 +28,7 @@ public class Randoms implements Iterable<Integer> {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
-                return random.ints(min, (max + 1)).iterator().nextInt();
+                return random.nextInt(max - min + 1) + min;
             }
         };
     }
